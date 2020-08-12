@@ -1,0 +1,6 @@
+docker pull devopsdockeruh/pull_exercise
+docker run -it devopsdockeruh/pull_exercise
+//Navigated to https://github.com/docker-hy/docs-exercise/blob/master/index.js from r/devopsdockeruh/pull_exercise Docker Hub page to find out the password
+Give me the password: basics
+You found the correct password. Secret message is:
+"This is the secret message"

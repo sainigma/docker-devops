@@ -1,0 +1,6 @@
+docker pull devopsdockeruh/exec_bash_exercise
+docker run -d devopsdockeruh/exec_bash_exercise
+docker container ls
+docker exec -it laughing_archimedes bash
+tail -f ./logs.txt
+"Docker is easy"
