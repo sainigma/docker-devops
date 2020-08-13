@@ -1,0 +1,8 @@
+Dockerfiles in folders
+
+front
+	docker build -t frontexample .
+	docker run -p 5000:5000 frontexample
+back
+	docker build -t backexample .
+	docker run -p 8000:8000 backexample

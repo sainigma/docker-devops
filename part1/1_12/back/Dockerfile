@@ -2,7 +2,6 @@ FROM node
 WORKDIR /usr/app
 COPY . .
 RUN npm install
-RUN npm install -g serve
-RUN npm run-script build
+ENV FRONT_URL=http://localhost:5000
 RUN chmod +x ./start.sh
 ENTRYPOINT ["./start.sh"]
