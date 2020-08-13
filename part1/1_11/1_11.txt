@@ -1,0 +1,2 @@
+docker build -t backexample .
+docker run --rm -v E:/ohjelmointi/git/docker-devops/part1/1_11/logs.txt:/usr/app/logs.txt -p 8000:8000 backexample
