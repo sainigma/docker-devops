@@ -8,6 +8,7 @@ services:
       environment:
         POSTGRES_USER: tietokanta
         POSTGRES_PASSWORD: salasana
+      container_name: db_postgres
 
     frontend:
       image: frontexample
