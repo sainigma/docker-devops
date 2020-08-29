@@ -1,0 +1,39 @@
+version: '3.5'
+
+services:
+
+    db:
+      image: postgres
+      restart: unless-stopped
+      environment:
+        POSTGRES_USER: tietokanta
+        POSTGRES_PASSWORD: salasana
+      container_name: db_postgres
+      volumes:
+        - ./db/data:/var/lib/postgresql/data
+
+    frontend:
+      image: frontexample
+      ports:
+        - 5000:5000
+      environment:
+        - API_URL=http://localhost:8000
+        
+    backend:
+      image: backexample
+      ports:
+        - 8000:8000
+      environment:
+        - FRONT_URL=http://localhost:5000
+        - REDIS=redissrv
+        - REDIS_PORT=6379
+        - DB_USERNAME=tietokanta
+        - DB_PASSWORD=salasana
+        - DB_HOST=db
+      depends_on:
+        - db
+        
+    redissrv:
+      image: redis
+      ports:
+        - 6379:6379
