@@ -1,0 +1,5 @@
+Size of images
+
+	before..	after optimization
+front	1.19GB		131MB
+back	961MB		108MB

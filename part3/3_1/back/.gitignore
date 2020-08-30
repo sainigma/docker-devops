@@ -1,0 +1,8 @@
+server/
+config.js
+index.js
+logs.txt
+package.json
+package-lock.json
+README.md
+prettier.config.js
